@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+
+<html lang="ro"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Padiver Motor SRL - Instalații GPL Profesionale</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-variant": "#d8e3fb",
+                "on-secondary-fixed": "#00210c",
+                "error": "#ba1a1a",
+                "secondary-fixed": "#6bfe9c",
+                "inverse-primary": "#abc7ff",
+                "surface-dim": "#cfdaf2",
+                "surface-tint": "#255dad",
+                "error-container": "#ffdad6",
+                "on-secondary-container": "#00743a",
+                "on-secondary": "#ffffff",
+                "on-primary-fixed-variant": "#00458f",
+                "tertiary-fixed-dim": "#c4c7c9",
+                "on-surface": "#111c2d",
+                "on-primary-fixed": "#001b3f",
+                "primary-fixed-dim": "#abc7ff",
+                "tertiary-fixed": "#e0e3e5",
+                "on-tertiary-fixed": "#191c1e",
+                "inverse-surface": "#263143",
+                "secondary": "#006d37",
+                "on-primary-container": "#9bbdff",
+                "tertiary": "#323537",
+                "on-secondary-fixed-variant": "#005228",
+                "on-error": "#ffffff",
+                "secondary-fixed-dim": "#4ae183",
+                "inverse-on-surface": "#ecf1ff",
+                "primary-fixed": "#d7e2ff",
+                "on-tertiary": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "surface": "#f9f9ff",
+                "on-surface-variant": "#424751",
+                "on-background": "#111c2d",
+                "on-tertiary-container": "#babcbe",
+                "surface-container": "#e7eeff",
+                "on-tertiary-fixed-variant": "#444749",
+                "on-primary": "#ffffff",
+                "secondary-container": "#6bfe9c",
+                "outline": "#737783",
+                "primary": "#00346f",
+                "surface-container-low": "#f0f3ff",
+                "surface-container-highest": "#d8e3fb",
+                "tertiary-container": "#494c4e",
+                "outline-variant": "#c2c6d3",
+                "primary-container": "#004a99",
+                "on-error-container": "#93000a",
+                "surface-container-high": "#dee8ff",
+                "background": "#f9f9ff",
+                "surface-bright": "#f9f9ff"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "base": "8px",
+                "margin-mobile": "16px",
+                "section-gap": "80px"
+        },
+        "fontFamily": {
+                "headline-xl": [
+                        "Montserrat"
+                ],
+                "headline-md": [
+                        "Montserrat"
+                ],
+                "label-sm": [
+                        "Inter"
+                ],
+                "body-lg": [
+                        "Inter"
+                ],
+                "headline-lg": [
+                        "Montserrat"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "headline-lg-mobile": [
+                        "Montserrat"
+                ]
+        },
+        "fontSize": {
+                "headline-xl": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "28px",
+                        {
+                                "lineHeight": "34px",
+                                "fontWeight": "700"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0, 52, 111, 0.9) 0%, rgba(0, 109, 55, 0.8) 100%);
+        }
+        .ambient-shadow {
+            box-shadow: 0 10px 20px -4px rgba(0, 52, 111, 0.08);
+        }
+        .hover-ambient-shadow:hover {
+            box-shadow: 0 16px 32px -4px rgba(0, 52, 111, 0.12);
+            transform: translateY(-2px);
+        }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Lightbox CSS */
+        .lightbox-open {
+            overflow: hidden;
+        }
+        #lightbox {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease-in-out;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        #lightbox.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        #lightbox-content {
+            transform: scale(0.95);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #lightbox.active #lightbox-content {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-surface/95 dark:bg-inverse-surface/95 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/30 shadow-sm transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-20">
+<div class="flex items-center gap-4">
+<img alt="Logo Padiver Motor SRL Automotive Engineering" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLu9RifrUGtdk7ws9UmxLT5jty4lHrb28zK0EHKFHAqnDVjI9tpLtBUIkGAwBj14a4op1FDVDZ2Fw9dhPsp_yvwEyplAaxlnsERay0KPMoI1hLW6dGImEAWDxnm-JOArFd3hKHC-GP7yodNzUY1vm3vMKn4BzQPSp6vZchyXCEpqbAJRzHOwuZu069_ZWgoDCT709PJpmaPO7hUds_MFjtAkqLYhaH2Y84jHq0VC_W4RhYcx2migsBGpKU0"/>
+<span class="font-headline-md text-headline-md font-bold text-primary hidden md:block">Padiver Motor</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-sm text-label-sm text-primary font-bold border-b-2 border-primary pb-1" href="#">Acasă</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:bg-primary-container/10 rounded-lg px-3 py-2" href="#servicii">Servicii</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:bg-primary-container/10 rounded-lg px-3 py-2" href="#calculator">Calculator GPL</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:bg-primary-container/10 rounded-lg px-3 py-2" href="#masini-lucrate">Mașini Lucrate</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:bg-primary-container/10 rounded-lg px-3 py-2" href="#contact">Contact</a>
+</div>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors hidden md:block">
+                Solicită Ofertă
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-20 lg:pt-32 pb-section-gap min-h-[90vh] flex items-center justify-center">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-primary/80 hero-gradient z-10 mix-blend-multiply"></div>
+<div class="w-full h-full bg-cover bg-center absolute inset-0 z-0 opacity-40" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLtVTpHRBCnYX9rXeRgfm_Yam55HaGpRuuGQk80EfShDtmS3ZNZItvmrs6dVyi9mWDLK3e5UtZ8JDKxVCDkIUQZbZrg5urhdC_l50FsIafIVZemp6A85qlMm0E99FA8G-ayFvAZEA7xswV8E7KICS3aWL07UHjIux_lveYDOhQlnJFufbDcviaE5pFQbs1pXgSOkCIuhVZH8bHKEoxeJ-LZiPr-gmjea4BRfeFeJ98ZvXng23C7DTqko0-A')"></div>
+</div>
+<div class="relative z-20 max-w-container-max mx-auto px-gutter text-center w-full">
+<div class="max-w-4xl mx-auto space-y-8">
+<div class="inline-flex items-center gap-2 bg-surface/10 backdrop-blur-sm border border-surface/20 rounded-full px-4 py-1.5 text-on-primary mb-4">
+<span class="material-symbols-outlined text-secondary-fixed text-sm">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">Partener BlueGreen România</span>
+</div>
+<h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-primary text-3xl">
+                    Economisește Până la 50% la Combustibil.<br/> Instalează GPL cu Padiver Motor SRL.
+                </h1>
+<p class="font-body-lg text-body-lg text-surface-container-low max-w-2xl mx-auto">
+                    Montaj Autorizat RAR, Garanție Premium și Siguranță Maximă pentru Mașina Ta în România. Expertiză tehnică de top la standarde europene.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+<button class="w-full sm:w-auto bg-secondary text-on-secondary font-label-sm text-label-sm px-8 py-4 rounded-lg hover:bg-secondary/90 transition-colors shadow-lg flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">calculate</span>
+                        Calculează Cât Economisești!
+                    </button>
+<a href="#masini-lucrate" class="w-full sm:w-auto bg-primary text-on-primary font-label-sm text-label-sm px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors shadow-lg flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">photo_library</span>
+                        Vezi mașinile lucrate
+                    </a>
+<button class="w-full sm:w-auto bg-transparent border border-on-primary text-on-primary font-label-sm text-label-sm px-8 py-4 rounded-lg hover:bg-on-primary/10 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">call</span>
+                        07XX XXX XXX
+                    </button>
+</div>
+<div class="flex flex-wrap justify-center gap-6 mt-12 pt-8 border-t border-on-primary/20">
+<div class="flex items-center gap-2 text-surface-container-low">
+<span class="material-symbols-outlined text-secondary-fixed">shield</span>
+<span class="font-label-sm text-label-sm">Autorizat RAR</span>
+</div>
+<div class="flex items-center gap-2 text-surface-container-low">
+<span class="material-symbols-outlined text-secondary-fixed">workspace_premium</span>
+<span class="font-label-sm text-label-sm">Garanție 2 Ani</span>
+</div>
+<div class="flex items-center gap-2 text-surface-container-low">
+<span class="material-symbols-outlined text-secondary-fixed">engineering</span>
+<span class="font-label-sm text-label-sm">Peste 10 Ani Experiență</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Problem & Solution Section -->
+<section class="py-section-gap bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16 max-w-3xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Prețurile la Combustibil Cresc. Mașina Ta Poate Cheltui Mai Puțin.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">O comparație clară a costurilor de rulare pentru 100 km.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+<div class="bg-surface rounded-xl p-8 border border-outline-variant/30 text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-5xl text-error mb-4">local_gas_station</span>
+<h3 class="font-headline-md text-body-lg font-bold text-on-surface mb-2">Benzină / Motorină</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant font-bold">~ 40 - 50 RON</p>
+<p class="font-body-md text-label-sm text-on-surface-variant mt-2">Costuri ridicate, poluare mai mare.</p>
+</div>
+<div class="bg-surface-container-low rounded-xl p-8 border border-secondary/30 ambient-shadow text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-5xl text-secondary mb-4">eco</span>
+<h3 class="font-headline-md text-body-lg font-bold text-on-surface mb-2">Instalație GPL</h3>
+<p class="font-body-lg text-body-lg text-secondary font-bold">~ 20 - 25 RON</p>
+<p class="font-body-md text-label-sm text-on-surface-variant mt-2">Economie de 50%, prietenos cu mediul.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap bg-surface" id="servicii">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16 max-w-3xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Serviciile Noastre Profesionale</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Soluții complete pentru conversia și întreținerea autoturismului tău pe GPL.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/30 ambient-shadow hover-ambient-shadow transition-all duration-300">
+<div class="w-12 h-12 bg-primary-container/10 rounded-lg flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">local_gas_station</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold text-on-surface mb-3">Montaj Instalații GPL</h3>
+<p class="font-body-md text-label-sm text-on-surface-variant">Instalații autohtone și internaționale premium: Tomasetto, Stag, BRC, dedicate fiecărui tip de motor.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/30 ambient-shadow hover-ambient-shadow transition-all duration-300">
+<div class="w-12 h-12 bg-secondary-container/20 rounded-lg flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined text-3xl">build_circle</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold text-on-surface mb-3">Revizii &amp; Diagnoză Computarizată</h3>
+<p class="font-body-md text-label-sm text-on-surface-variant">Întreținere periodică, diagnoză precisă și reglaje fine pentru performanță optimă și consum redus.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/30 ambient-shadow hover-ambient-shadow transition-all duration-300">
+<div class="w-12 h-12 bg-primary-container/10 rounded-lg flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">settings_applications</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold text-on-surface mb-3">Piese GPL Originale &amp; Garanție</h3>
+<p class="font-body-md text-label-sm text-on-surface-variant">Folosim exclusiv componente originale, omologate, însoțite de garanție extinsă pentru liniștea ta.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/30 ambient-shadow hover-ambient-shadow transition-all duration-300">
+<div class="w-12 h-12 bg-secondary-container/20 rounded-lg flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined text-3xl">fact_check</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold text-on-surface mb-3">Acte &amp; Omologare RAR</h3>
+<p class="font-body-md text-label-sm text-on-surface-variant">Îți pregătim dosarul complet și te asistăm în procesul de omologare la Registrul Auto Român.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ROI Calculator Section -->
+<section class="py-section-gap bg-surface-container-lowest" id="calculator">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16 max-w-3xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Calculator Economie GPL</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Află în cât timp îți recuperezi investiția.</p>
+</div>
+<div class="max-w-2xl mx-auto bg-surface rounded-xl p-8 border border-outline-variant/30 ambient-shadow w-full">
+<div class="space-y-6">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface block mb-2" for="km">Kilometri parcurși lunar:</label>
+<input class="w-full rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface text-[16px] px-4 py-2 focus:ring-primary focus:border-primary" id="km" placeholder="Ex: 1500" type="number" inputmode="numeric"/>
+<span id="error-km" class="text-error text-xs mt-1 hidden">Introdu o valoare realistă (între 100 și 20000 km)</span>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface block mb-2" for="consum">Consum mediu benzină (L/100km):</label>
+<input class="w-full rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface text-[16px] px-4 py-2 focus:ring-primary focus:border-primary" id="consum" placeholder="Ex: 8" type="number" inputmode="numeric"/>
+<span id="error-consum" class="text-error text-xs mt-1 hidden">Introdu un consum realist (între 3 și 30 L/100km)</span>
+</div>
+<button id="calc-btn" class="w-full bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors mt-4">Calculează Economia</button>
+
+<div id="result-box" class="mt-6 hidden opacity-0 transition-opacity duration-200">
+<div class="p-6 bg-secondary-container/20 rounded-lg text-center border border-secondary/30 mb-4">
+<div class="mb-4">
+<p class="font-body-md text-label-sm text-on-surface-variant mb-1">Economie lunară:</p>
+<p id="economie-lunara" class="font-headline-md text-headline-md text-secondary font-semibold">~ 0 RON</p>
+</div>
+<div class="mb-4 border-t border-secondary/20 pt-4">
+<p class="font-body-md text-label-sm text-on-surface-variant mb-1 uppercase tracking-wider font-bold">Economie estimată anuală:</p>
+<p id="economie-anuala" class="font-headline-lg text-headline-lg text-secondary font-bold">~ 0 RON</p>
+</div>
+<div class="border-t border-secondary/20 pt-4">
+<p class="font-body-md text-label-sm text-on-surface-variant mb-1">Îți recuperezi investiția în:</p>
+<p id="amortizare" class="font-headline-md text-headline-md text-on-surface font-semibold">~ 0 luni</p>
+</div>
+</div>
+<p class="text-[11px] text-on-surface-variant/80 text-center mb-6 leading-tight">
+Calcul estimativ, la prețuri medii de <span id="discl-pret-benzina">X</span> lei/l benzină și <span id="discl-pret-gpl">Y</span> lei/l GPL (valorile din config, afișate dinamic). Consumul real pe GPL este cu ~15% mai mare decât pe benzină. Economia reală depinde de stilul de condus și prețurile locale.
+</p>
+<a href="#contact" class="w-full bg-secondary text-on-secondary font-label-sm text-label-sm px-8 py-4 rounded-lg hover:bg-secondary/90 transition-colors shadow-lg flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">handshake</span>
+Cere ofertă pentru montaj
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mașini Lucrate Section -->
+<section class="py-section-gap bg-surface" id="masini-lucrate">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16 max-w-3xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Mașini lucrate</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Instalații GPL montate de noi.</p>
+</div>
+<div id="masini-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Cards injected by JS -->
+</div>
+</div>
+</section>
+<!-- Lightbox Container -->
+<div id="lightbox" class="fixed inset-0 z-[100] flex items-center justify-center bg-inverse-surface/90 p-4 sm:p-8" role="dialog" aria-modal="true">
+<div class="absolute inset-0 z-0" id="lightbox-backdrop"></div>
+<div id="lightbox-content" class="relative z-10 w-full max-w-4xl bg-surface rounded-xl overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-full">
+<!-- Injected by JS -->
+</div>
+</div>
+<!-- Social Proof Section -->
+<section class="py-section-gap bg-surface">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16 max-w-3xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Ce Spun Clienții Noștri Mulțumiți</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/30 ambient-shadow">
+<p class="font-body-md text-body-md text-on-surface-variant italic mb-6">"Montajul a decurs impecabil. Băieții sunt profesioniști, iar mașina merge perfect pe GPL. Recomand!"</p>
+<div class="flex items-center gap-4">
+<img alt="Client" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLtR91SMYQKNAKu3iqcPaR6lkUP7VFEURdPY4PSArwm2sqCU-LtSUwirNiHf0VCyXtUBgAlakqIxIHIZKWjRcBVDxF8Gl2_36WqFOBMg2NSwyR-6qUz5qW_BKb8xO1QGN6vyVpygX8FX4aZDPfN9WEG2HEt64hmw_lac_WYz-WKRhTw5PCD_gVxcqj2tIPwSzAGDkWeNCiExMK7eWJEtfZLP-raa0oYBx9OiwlO-xFTx7mx0c-ZGsSS_nMg"/>
+<div>
+<p class="font-label-sm text-label-sm font-bold text-on-surface">Maria Popescu</p>
+<p class="text-xs text-on-surface-variant">Dacia Logan</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/30 ambient-shadow">
+<p class="font-body-md text-body-md text-on-surface-variant italic mb-6">"Economia se simte de la primul plin. Mă bucur că am ales Padiver Motor pentru instalare."</p>
+<div class="flex items-center gap-4">
+<img alt="Client" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLunHv37zn6HJzV-6wS3ovIQA0fh0FmPEEnpUCcmuuaOmknarb9mkU-eKlb0_wFZRtzOHwxpaGm9lq7QsWatA1-QDKf5RrgaOjszQwlAGq2tKX2yrZ8DDZNsm3aUeTHJQfjOOnBwv8AVQZrrHUeUJ9OAzv3AcYHmZTd6XjyP3gd3qH3B1ww-XNQI9HVz6PdGnc4Ujtqq9tr678qe7X0omvSOPlNLqqvHDpEs_mkPxCm6flJUUvD0Jewd6UQ"/>
+<div>
+<p class="font-label-sm text-label-sm font-bold text-on-surface">Ion Ionescu</p>
+<p class="text-xs text-on-surface-variant">Skoda Octavia</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/30 ambient-shadow">
+<p class="font-body-md text-body-md text-on-surface-variant italic mb-6">"Servicii de top. Revizia se face rapid, iar comunicarea cu echipa este excelentă."</p>
+<div class="flex items-center gap-4">
+<img alt="Client" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsyAQQ-XFmSwvIieYPyo2xKqPuW5v1xb-qTxVFvrPU7UGocj6r_BYK_ZGVU1AGIdguJhV7St9JTw9Hst8QbxONWeLLyFotfeWRjZYS4FRmNfVad5B76qGdxv0lwN2f-nNdlUid0z_Kzw3Ocr2JbtRfUKtTlbq_CUxyXiOaHRfoGeZrzyfoQIkctCc1YnULbMIwWEFm1eZS0LX99eoh6fN9hGJ3Wgc9ZZeXq2zVYBOSVrlRT6Uyv1DbA5Q"/>
+<div>
+<p class="font-label-sm text-label-sm font-bold text-on-surface">Andrei Radu</p>
+<p class="text-xs text-on-surface-variant">Renault Megane</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-section-gap bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16 max-w-3xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Întrebări Frecvente Despre GPL</h2>
+</div>
+<div class="max-w-3xl mx-auto space-y-4">
+<details class="group border border-outline-variant/30 rounded-lg bg-surface [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between p-4 cursor-pointer font-label-sm text-label-sm font-bold text-on-surface">
+<span>Instalația GPL afectează motorul?</span>
+<span class="transition group-open:rotate-180 material-symbols-outlined">expand_more</span>
+</summary>
+<div class="p-4 pt-0 text-on-surface-variant font-body-md text-body-md">
+                    Nu. Instalațiile moderne sunt concepute să protejeze motorul, iar un montaj corect nu afectează durata de viață a acestuia.
+                </div>
+</details>
+<details class="group border border-outline-variant/30 rounded-lg bg-surface [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between p-4 cursor-pointer font-label-sm text-label-sm font-bold text-on-surface">
+<span>Este sigură o instalație GPL?</span>
+<span class="transition group-open:rotate-180 material-symbols-outlined">expand_more</span>
+</summary>
+<div class="p-4 pt-0 text-on-surface-variant font-body-md text-body-md">
+                    Da. Rezervoarele GPL sunt mult mai groase și mai rezistente decât cele de benzină, fiind prevăzute cu sisteme de siguranță multiple.
+                </div>
+</details>
+<details class="group border border-outline-variant/30 rounded-lg bg-surface [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between p-4 cursor-pointer font-label-sm text-label-sm font-bold text-on-surface">
+<span>Cât durează montajul?</span>
+<span class="transition group-open:rotate-180 material-symbols-outlined">expand_more</span>
+</summary>
+<div class="p-4 pt-0 text-on-surface-variant font-body-md text-body-md">
+                    În general, un montaj standard durează o singură zi lucrătoare.
+                </div>
+</details>
+</div>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="py-16 bg-primary">
+<div class="max-w-container-max mx-auto px-gutter text-center">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary mb-6">Solicită o Ofertă Personalizată GPL Astăzi!</h2>
+<button class="bg-secondary text-on-secondary font-label-sm text-label-sm px-8 py-4 rounded-lg hover:bg-secondary/90 transition-colors shadow-lg inline-flex items-center gap-2">
+<span class="material-symbols-outlined">arrow_forward</span>
+            Vreau Oferta Acum
+        </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full pt-section-gap pb-base border-t border-outline-variant/50" id="contact">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-gutter mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-4">
+<img alt="Logo Footer" class="h-10 w-auto object-contain grayscale opacity-80" src="https://lh3.googleusercontent.com/aida/AP1WRLu9RifrUGtdk7ws9UmxLT5jty4lHrb28zK0EHKFHAqnDVjI9tpLtBUIkGAwBj14a4op1FDVDZ2Fw9dhPsp_yvwEyplAaxlnsERay0KPMoI1hLW6dGImEAWDxnm-JOArFd3hKHC-GP7yodNzUY1vm3vMKn4BzQPSp6vZchyXCEpqbAJRzHOwuZu069_ZWgoDCT709PJpmaPO7hUds_MFjtAkqLYhaH2Y84jHq0VC_W4RhYcx2migsBGpKU0"/>
+</div>
+<p class="font-body-md text-label-sm text-on-surface-variant">
+                    Padiver Motor SRL - Lideri în instalații GPL auto, oferind soluții economice și ecologice de peste un deceniu.
+                </p>
+</div>
+<div class="col-span-1">
+<h4 class="font-headline-md text-body-lg font-bold text-primary mb-4">Linkuri Utile</h4>
+<ul class="space-y-3">
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer block hover:translate-x-1 duration-200" href="#">Termeni și Condiții</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer block hover:translate-x-1 duration-200" href="#">Politică Confidentialitate</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer block hover:translate-x-1 duration-200" href="#">ANPC</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-headline-md text-body-lg font-bold text-primary mb-4">Contact</h4>
+<ul class="space-y-3">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-0.5">location_on</span>
+<span class="font-body-md text-label-sm text-on-surface-variant">Strada Exemplu Nr. 10, Oraș, România</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">call</span>
+<span class="font-body-md text-label-sm text-on-surface-variant">07XX XXX XXX</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">mail</span>
+<span class="font-body-md text-label-sm text-on-surface-variant">contact@padivermotor.ro</span>
+</li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-headline-md text-body-lg font-bold text-primary mb-4">Program</h4>
+<ul class="space-y-2">
+<li class="flex justify-between font-body-md text-label-sm text-on-surface-variant border-b border-outline-variant/30 pb-1">
+<span>Luni - Vineri</span>
+<span class="font-semibold text-on-surface">08:00 - 18:00</span>
+</li>
+<li class="flex justify-between font-body-md text-label-sm text-on-surface-variant border-b border-outline-variant/30 pb-1">
+<span>Sâmbătă</span>
+<span class="font-semibold text-on-surface">09:00 - 13:00</span>
+</li>
+<li class="flex justify-between font-body-md text-label-sm text-on-surface-variant pb-1">
+<span>Duminică</span>
+<span class="text-error font-semibold">Închis</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter border-t border-outline-variant/30 pt-6 mt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-label-sm text-on-surface-variant text-center md:text-left">
+                © 2024 Padiver Motor SRL. Toate drepturile rezervate. Instalații GPL Profesionale.
+            </p>
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+</div>
+</div>
+</footer>
+<script src="./js/masiniLucrate.js"></script>
+<script type="module" src="./js/calculator.js"></script>
+</body></html>
