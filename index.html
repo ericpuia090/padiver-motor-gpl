@@ -218,12 +218,25 @@
 <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:bg-primary-container/10 rounded-lg px-3 py-2" href="#masini-lucrate">Mașini Lucrate</a>
 <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:bg-primary-container/10 rounded-lg px-3 py-2" href="#contact">Contact</a>
 </div>
-<button class="bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors hidden md:block">
+<a href="#contact" class="bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors hidden md:block">
                 Solicită Ofertă
-            </button>
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined text-3xl">menu</span>
+            </a>
+<button id="mobile-menu-btn" class="md:hidden text-primary p-2" aria-label="Toggle Menu">
+<span class="material-symbols-outlined text-3xl" id="mobile-menu-icon">menu</span>
 </button>
+</div>
+<!-- Mobile Menu Dropdown -->
+<div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-outline-variant/30 shadow-lg absolute w-full top-20 left-0">
+<div class="flex flex-col px-gutter py-4 space-y-4">
+<a class="font-label-sm text-label-sm text-primary font-bold" href="#">Acasă</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#servicii">Servicii</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#calculator">Calculator GPL</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#masini-lucrate">Mașini Lucrate</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
+<a href="#contact" class="w-full text-center bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors mt-2">
+Solicită Ofertă
+</a>
+</div>
 </div>
 </nav>
 <!-- Hero Section -->
@@ -245,18 +258,18 @@
                     Montaj Autorizat RAR, Garanție Premium și Siguranță Maximă pentru Mașina Ta în România. Expertiză tehnică de top la standarde europene.
                 </p>
 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-<button class="w-full sm:w-auto bg-secondary text-on-secondary font-label-sm text-label-sm px-8 py-4 rounded-lg hover:bg-secondary/90 transition-colors shadow-lg flex items-center justify-center gap-2">
+<a href="#calculator" class="w-full sm:w-auto bg-secondary text-on-secondary font-label-sm text-label-sm px-8 py-4 rounded-lg hover:bg-secondary/90 transition-colors shadow-lg flex items-center justify-center gap-2">
 <span class="material-symbols-outlined">calculate</span>
                         Calculează Cât Economisești!
-                    </button>
+                    </a>
 <a href="#masini-lucrate" class="w-full sm:w-auto bg-primary text-on-primary font-label-sm text-label-sm px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors shadow-lg flex items-center justify-center gap-2">
 <span class="material-symbols-outlined">photo_library</span>
                         Vezi mașinile lucrate
                     </a>
-<button class="w-full sm:w-auto bg-transparent border border-on-primary text-on-primary font-label-sm text-label-sm px-8 py-4 rounded-lg hover:bg-on-primary/10 transition-colors flex items-center justify-center gap-2">
+<a href="tel:0700000000" class="w-full sm:w-auto bg-transparent border border-on-primary text-on-primary font-label-sm text-label-sm px-8 py-4 rounded-lg hover:bg-on-primary/10 transition-colors flex items-center justify-center gap-2">
 <span class="material-symbols-outlined">call</span>
                         07XX XXX XXX
-                    </button>
+                    </a>
 </div>
 <div class="flex flex-wrap justify-center gap-6 mt-12 pt-8 border-t border-on-primary/20">
 <div class="flex items-center gap-2 text-surface-container-low">
@@ -562,4 +575,27 @@ Cere ofertă pentru montaj
 </footer>
 <script src="./js/masiniLucrate.js"></script>
 <script type="module" src="./js/calculator.js"></script>
+<script>
+    // Mobile Menu Toggle Logic
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenuIcon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuIcon.textContent = 'menu';
+                });
+            });
+        }
+    });
+</script>
 </body></html>
