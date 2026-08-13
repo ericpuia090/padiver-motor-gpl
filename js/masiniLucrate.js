@@ -85,6 +85,21 @@ const masiniLucrate = [
             'masini/audi-q5-3.jpg',
             'masini/audi-q5-4.jpg'
         ]
+    },
+    {
+        id: 'skoda-superb-20-tsi-2023',
+        title: 'Skoda Superb 2.0 TSI 2023',
+        kit: 'GPL Prins',
+        power: '280 Hp',
+        description: `Skoda Superb 2.0 TSI 280Hp
+19000 km fabricație 2023
+Instalație GPL Prins`,
+        images: [
+            'masini/skoda-superb-1.jpg',
+            'masini/skoda-superb-2.jpg',
+            'masini/skoda-superb-3.jpg',
+            'masini/skoda-superb-4.jpg'
+        ]
     }
 ];
 
