@@ -60,6 +60,18 @@ const masiniLucrate = [
             'masini/ford-ranger-raptor-4.jpg',
             'masini/ford-ranger-raptor-5.jpg'
         ]
+    },
+    {
+        id: 'toyota-rav-4-hybrid-2018',
+        title: 'Toyota RAV 4  2,5 Hybrid 2018',
+        kit: 'GPL Prins',
+        power: '',
+        description: 'Toyota RAV 4  2,5 Hybrid 2018 cu sistem GPL Prins. Economie garantata.',
+        images: [
+            'masini/toyota-rav4-hybrid-2018-1.jpg',
+            'masini/toyota-rav4-hybrid-2018-2.jpg',
+            'masini/toyota-rav4-hybrid-2018-3.jpg'
+        ]
     }
 ];
 
