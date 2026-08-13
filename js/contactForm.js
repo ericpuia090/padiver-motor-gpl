@@ -12,15 +12,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Toate butoanele de deschidere a ofertei (le vom adăuga clasa js-open-offer-modal)
     const openBtns = document.querySelectorAll('.js-open-offer-modal');
 
-    // Deschidere modal
-    const openModal = (e) => {
-        if (e) e.preventDefault();
-        
+    // Deschidere modal (expus global pentru a putea fi chemat din alte scripturi)
+    window.openQuoteForm = (prefill = {}) => {
         // Resetăm formularul la redeschidere
         form.reset();
         form.style.display = 'block';
         successMessage.classList.add('hidden');
         clearErrors();
+
+        if (prefill.dateAuto) {
+            document.getElementById('offer-dateAuto').value = prefill.dateAuto;
+        }
 
         // Afișăm modalul
         modal.classList.remove('opacity-0', 'pointer-events-none');
@@ -35,13 +37,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    const handleOpenClick = (e) => {
+        e.preventDefault();
+        window.openQuoteForm();
+    };
+
     // Închidere modal
     const closeModal = () => {
         modal.classList.add('opacity-0', 'pointer-events-none');
         document.body.classList.remove('overflow-hidden');
     };
 
-    openBtns.forEach(btn => btn.addEventListener('click', openModal));
+    openBtns.forEach(btn => btn.addEventListener('click', handleOpenClick));
     modalBackdrop.addEventListener('click', closeModal);
     modalCloseBtn.addEventListener('click', closeModal);
 

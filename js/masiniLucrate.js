@@ -145,9 +145,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">${car.description}</p>
                 
                 <div class="mt-auto pt-6 border-t border-outline-variant/30">
-                    <a href="#contact" onclick="closeLightbox()" class="w-full bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors shadow-sm inline-flex items-center justify-center gap-2">
+                    <button onclick="openQuoteFromLightbox(${car.id})" class="w-full bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors shadow-sm inline-flex items-center justify-center gap-2">
                         Solicită ofertă pentru mașina ta
-                    </a>
+                    </button>
                 </div>
             </div>
         `;
@@ -164,6 +164,23 @@ document.addEventListener('DOMContentLoaded', () => {
                  lightboxContent.innerHTML = '';
             }
         }, 300); // Wait for transition
+    };
+
+    window.openQuoteFromLightbox = (id) => {
+        const car = masiniLucrate.find(c => c.id === id);
+        if (!car) return;
+        
+        let prefillText = `${car.title}`;
+        if (car.kit) {
+            prefillText += ` cu instalație ${car.kit}`;
+        }
+        prefillText += ` — doresc o ofertă similară`;
+
+        closeLightbox();
+        
+        if (window.openQuoteForm) {
+            window.openQuoteForm({ dateAuto: prefillText });
+        }
     };
 
     // Event listeners for closing
