@@ -32,6 +32,20 @@ const masiniLucrate = [
             'masini/toyota-c-hr-2026-4.jpg',
             'masini/toyota-c-hr-2026-5.jpg'
         ]
+    },
+    {
+        id: 'kgm-actyon',
+        title: 'KGM Actyon',
+        kit: 'sistem Valvecare',
+        power: '',
+        description: 'KGM Actyon montaj GPL de la 0 Km instalatie Prins cu sistem Valvecare si rezervor toroidal de 54L.',
+        images: [
+            'masini/kgm-actyon-1.jpg',
+            'masini/kgm-actyon-2.jpg',
+            'masini/kgm-actyon-3.jpg',
+            'masini/kgm-actyon-4.jpg',
+            'masini/kgm-actyon-5.jpg'
+        ]
     }
 ];
 
