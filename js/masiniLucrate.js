@@ -21,56 +21,17 @@
  */
 const masiniLucrate = [
     {
-        id: 1,
-        title: "Mercedes ML 63 BRABUS",
-        kit: "Landi Renzo",
-        power: "600 CP",
-        description: "Instalație premium calibrată perfect pentru performanță maximă fără pierdere de putere.",
+        id: 'toyota-c-hr-2026',
+        title: 'Toyota C-HR 2026',
+        kit: 'GPL Landirenzo Omegas EVO',
+        description: 'Toyota C-HR 2026 de la 0 Km montaj GPL Landirenzo Omegas EVO cu un rezervor toroidal de 52L. Economie maximă în vremuri în care prețul benzinei ne dă fiori',
         images: [
-            "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80&w=800&h=600",
-            "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800&h=600",
-            "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&q=80&w=800&h=600"
+            'masini/toyota-c-hr-2026-1.jpg',
+            'masini/toyota-c-hr-2026-2.jpg',
+            'masini/toyota-c-hr-2026-3.jpg',
+            'masini/toyota-c-hr-2026-4.jpg',
+            'masini/toyota-c-hr-2026-5.jpg'
         ]
-    },
-    {
-        id: 2,
-        title: "Porsche Cayenne",
-        kit: "BRC Gas Equipment",
-        power: "340 CP",
-        description: "Conversie eficientă pentru SUV-uri de lux, menținând fiabilitatea motorului V6.",
-        images: ["https://images.unsplash.com/photo-1503376712351-1b2d41def336?auto=format&fit=crop&q=80&w=800&h=600"]
-    },
-    {
-        id: 3,
-        title: "BMW X5 4.8i",
-        kit: "Tomasetto",
-        power: "355 CP",
-        description: "Integrare impecabilă a sistemului GPL pe un motor V8 puternic și pretențios.",
-        images: ["https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800&h=600"]
-    },
-    {
-        id: 4,
-        title: "Audi Q7",
-        kit: "Stag 300 ISA2",
-        power: "280 CP",
-        description: "Economie substanțială de combustibil la drum lung cu o instalație de ultimă generație.",
-        images: ["https://images.unsplash.com/photo-1614026480209-cd9934144671?auto=format&fit=crop&q=80&w=800&h=600"]
-    },
-    {
-        id: 5,
-        title: "Ford F-150 Raptor",
-        kit: "Prins VSI",
-        power: "450 CP",
-        description: "Capacitate extinsă de rulare și costuri reduse pentru acest monstru american.",
-        images: ["https://images.unsplash.com/photo-1559416523-140ddc3d238c?auto=format&fit=crop&q=80&w=800&h=600"]
-    },
-    {
-        id: 6,
-        title: "Toyota Tundra",
-        kit: "Landi Renzo",
-        power: "381 CP",
-        description: "Autonomie crescută și funcționare silențioasă cu noul sistem de injecție directă.",
-        images: ["https://images.unsplash.com/photo-1582467029213-ce71667c2e28?auto=format&fit=crop&q=80&w=800&h=600"]
     }
 ];
 
@@ -87,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gridContainer.innerHTML = masiniLucrate.map(car => `
             <article 
                 class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 ambient-shadow hover-ambient-shadow transition-all duration-300 cursor-pointer overflow-hidden flex flex-col group h-full"
-                onclick="openLightbox(${car.id})"
+                onclick="openLightbox('${car.id}')"
                 tabindex="0"
                 role="button"
                 aria-label="Vezi detalii ${car.title}"
