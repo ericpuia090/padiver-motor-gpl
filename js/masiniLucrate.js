@@ -72,6 +72,19 @@ const masiniLucrate = [
             'masini/toyota-rav4-hybrid-2018-2.jpg',
             'masini/toyota-rav4-hybrid-2018-3.jpg'
         ]
+    },
+    {
+        id: 'audi-q5',
+        title: 'Audi Q5',
+        kit: 'GPL Prins',
+        power: '',
+        description: 'Audi Q5 instalație GPL Prins',
+        images: [
+            'masini/audi-q5-1.jpg',
+            'masini/audi-q5-2.jpg',
+            'masini/audi-q5-3.jpg',
+            'masini/audi-q5-4.jpg'
+        ]
     }
 ];
 
