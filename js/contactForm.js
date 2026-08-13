@@ -13,16 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const openBtns = document.querySelectorAll('.js-open-offer-modal');
 
     // Deschidere modal (expus global pentru a putea fi chemat din alte scripturi)
-    window.openQuoteForm = (prefill = {}) => {
+    window.openQuoteForm = () => {
         // Resetăm formularul la redeschidere
         form.reset();
         form.style.display = 'block';
         successMessage.classList.add('hidden');
         clearErrors();
-
-        if (prefill.dateAuto) {
-            document.getElementById('offer-dateAuto').value = prefill.dateAuto;
-        }
 
         // Afișăm modalul
         modal.classList.remove('opacity-0', 'pointer-events-none');
