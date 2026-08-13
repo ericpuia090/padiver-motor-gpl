@@ -218,7 +218,7 @@
 <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:bg-primary-container/10 rounded-lg px-3 py-2" href="#masini-lucrate">Mașini Lucrate</a>
 <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:bg-primary-container/10 rounded-lg px-3 py-2" href="#contact">Contact</a>
 </div>
-<a href="#contact" class="bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors hidden md:block">
+<a href="#" class="js-open-offer-modal bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors hidden md:block">
                 Solicită Ofertă
             </a>
 <button id="mobile-menu-btn" class="md:hidden text-primary p-2" aria-label="Toggle Menu">
@@ -233,7 +233,7 @@
 <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#calculator">Calculator GPL</a>
 <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#masini-lucrate">Mașini Lucrate</a>
 <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
-<a href="#contact" class="w-full text-center bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors mt-2">
+<a href="#" class="js-open-offer-modal w-full text-center bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors mt-2">
 Solicită Ofertă
 </a>
 </div>
@@ -406,7 +406,7 @@ Solicită Ofertă
 <p class="text-[11px] text-on-surface-variant/80 text-center mb-6 leading-tight">
 Calcul estimativ, la prețuri medii de <span id="discl-pret-benzina">X</span> lei/l benzină și <span id="discl-pret-gpl">Y</span> lei/l GPL (valorile din config, afișate dinamic). Consumul real pe GPL este cu ~15% mai mare decât pe benzină. Economia reală depinde de stilul de condus și prețurile locale.
 </p>
-<a href="#contact" class="w-full bg-secondary text-on-secondary font-label-sm text-label-sm px-8 py-4 rounded-lg hover:bg-secondary/90 transition-colors shadow-lg flex items-center justify-center gap-2">
+<a href="#" class="js-open-offer-modal w-full bg-secondary text-on-secondary font-label-sm text-label-sm px-8 py-4 rounded-lg hover:bg-secondary/90 transition-colors shadow-lg flex items-center justify-center gap-2">
 <span class="material-symbols-outlined">handshake</span>
 Cere ofertă pentru montaj
 </a>
@@ -515,7 +515,7 @@ Cere ofertă pentru montaj
 <section class="py-16 bg-primary">
 <div class="max-w-container-max mx-auto px-gutter text-center">
 <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary mb-6">Solicită o Ofertă Personalizată GPL Astăzi!</h2>
-<button class="bg-secondary text-on-secondary font-label-sm text-label-sm px-8 py-4 rounded-lg hover:bg-secondary/90 transition-colors shadow-lg inline-flex items-center gap-2">
+<button class="js-open-offer-modal bg-secondary text-on-secondary font-label-sm text-label-sm px-8 py-4 rounded-lg hover:bg-secondary/90 transition-colors shadow-lg inline-flex items-center gap-2">
 <span class="material-symbols-outlined">arrow_forward</span>
             Vreau Oferta Acum
         </button>
@@ -611,4 +611,59 @@ Cere ofertă pentru montaj
         }
     });
 </script>
+<!-- Offer Modal -->
+<div id="offer-modal" class="fixed inset-0 z-[110] flex flex-col items-center justify-center p-0 md:p-4 opacity-0 pointer-events-none transition-opacity duration-300" role="dialog" aria-modal="true">
+    <div id="offer-modal-backdrop" class="absolute inset-0 bg-inverse-surface/80 backdrop-blur-sm z-0 cursor-pointer"></div>
+    <div class="relative z-10 w-full h-full md:h-auto md:max-h-[90vh] md:max-w-lg bg-surface flex flex-col md:rounded-xl shadow-2xl overflow-hidden">
+        <div class="flex items-center justify-between p-4 border-b border-outline-variant/30 bg-surface">
+            <h2 class="font-headline-md text-headline-md text-primary">Solicită Ofertă</h2>
+            <button id="offer-modal-close" class="text-on-surface-variant hover:text-primary transition-colors p-2" aria-label="Închide">
+                <span class="material-symbols-outlined text-2xl">close</span>
+            </button>
+        </div>
+        <div class="p-6 overflow-y-auto flex-1">
+            <form id="offer-form" class="space-y-4" novalidate>
+                <div>
+                    <label for="offer-nume" class="block font-label-sm text-label-sm text-on-surface mb-1">Nume și prenume</label>
+                    <input type="text" id="offer-nume" class="w-full min-h-[48px] rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface text-[16px] px-4 py-2 focus:ring-primary focus:border-primary transition-colors" required>
+                    <p id="error-offer-nume" class="text-error text-xs mt-1 hidden"></p>
+                </div>
+                <div>
+                    <label for="offer-telefon" class="block font-label-sm text-label-sm text-on-surface mb-1">Telefon</label>
+                    <input type="tel" id="offer-telefon" inputmode="tel" class="w-full min-h-[48px] rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface text-[16px] px-4 py-2 focus:ring-primary focus:border-primary transition-colors" required>
+                    <p id="error-offer-telefon" class="text-error text-xs mt-1 hidden"></p>
+                </div>
+                <div>
+                    <label for="offer-email" class="block font-label-sm text-label-sm text-on-surface mb-1">Adresă e-mail</label>
+                    <input type="email" id="offer-email" class="w-full min-h-[48px] rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface text-[16px] px-4 py-2 focus:ring-primary focus:border-primary transition-colors" required>
+                    <p id="error-offer-email" class="text-error text-xs mt-1 hidden"></p>
+                </div>
+                <div>
+                    <label for="offer-localitate" class="block font-label-sm text-label-sm text-on-surface mb-1">Localitate</label>
+                    <input type="text" id="offer-localitate" class="w-full min-h-[48px] rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface text-[16px] px-4 py-2 focus:ring-primary focus:border-primary transition-colors" required>
+                    <p id="error-offer-localitate" class="text-error text-xs mt-1 hidden"></p>
+                </div>
+                <div>
+                    <label for="offer-dateAuto" class="block font-label-sm text-label-sm text-on-surface mb-1">Date auto și observații</label>
+                    <textarea id="offer-dateAuto" rows="3" placeholder="Ex: Ford Focus 1.5 2016" class="w-full min-h-[48px] rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface text-[16px] px-4 py-3 focus:ring-primary focus:border-primary transition-colors placeholder:text-on-surface-variant/50" required></textarea>
+                    <p id="error-offer-dateAuto" class="text-error text-xs mt-1 hidden"></p>
+                </div>
+                <div class="pt-4 pb-8 md:pb-0">
+                    <button type="submit" id="offer-submit-btn" class="w-full min-h-[48px] bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors shadow-md">
+                        Trimite oferta
+                    </button>
+                </div>
+            </form>
+            <div id="offer-success-message" class="hidden flex-col items-center justify-center py-12 text-center h-full">
+                <span class="material-symbols-outlined text-5xl text-secondary mb-4">check_circle</span>
+                <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Se deschide WhatsApp...</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6">Dacă aplicația nu se deschide automat în câteva secunde, te rugăm să folosești butonul de mai jos.</p>
+                <a href="#" id="offer-fallback-link" target="_blank" rel="noopener noreferrer" class="min-h-[48px] bg-secondary text-on-secondary font-label-sm text-label-sm px-8 py-3 rounded-lg hover:bg-secondary/90 transition-colors shadow-lg inline-flex items-center justify-center">
+                    Apasă aici
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="module" src="./js/contactForm.js"></script>
 </body></html>
