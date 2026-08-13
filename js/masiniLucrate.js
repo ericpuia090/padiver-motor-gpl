@@ -46,6 +46,20 @@ const masiniLucrate = [
             'masini/kgm-actyon-4.jpg',
             'masini/kgm-actyon-5.jpg'
         ]
+    },
+    {
+        id: 'ford-ranger-raptor',
+        title: 'Ford Ranger Raptor 3.0L',
+        kit: 'GPL Prins',
+        power: '300 Hp',
+        description: 'Ford Ranger Raptor 3.0L 300 Hp de acum cu instalatie GPL Prins si un rezervor de 110L. Economie garantata!',
+        images: [
+            'masini/ford-ranger-raptor-1.jpg',
+            'masini/ford-ranger-raptor-2.jpg',
+            'masini/ford-ranger-raptor-3.jpg',
+            'masini/ford-ranger-raptor-4.jpg',
+            'masini/ford-ranger-raptor-5.jpg'
+        ]
     }
 ];
 
